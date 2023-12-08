@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, router } from 'expo-router';
-import {styles} from './styles/styles';
+import {SimpleLink} from './components/SimpleLink.js'
+import {MyButton} from './components/MyButton.js'
+
 import { 
   Container, 
   Text, 
@@ -9,7 +11,8 @@ import {
   Box, 
   Button, 
   Divider,
-  VStack
+  VStack,
+  Stack
 } from "native-base";
 
 
@@ -22,23 +25,18 @@ const Home = () => {
           <Text color="emerald.500"> Mentis Arena</Text>
         </Heading>
 
-        <Center h="200" bg="transparent" rounded="md"  p="5" margin="auto" borderWidth={1} borderColor="white">
-          <Text  fontWeight="medium" color="white">
+        <Box bg="transparent" rounded="md"  p="5" m="auto" borderWidth={1} borderColor="white">
+          <Text  fontWeight="medium" color="white" pb="4">
             Oyun panelinizə xoş gəldiniz!
             Biliyinizi parlatmaq və zehninizi sınağa çəkmək üçün mükəmməl bir fürsət!
           </Text>
-          <VStack space={4} alignItems="center" w="100%">
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => router.push("/login")}>
-                Login
-            </Button>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => router.push("/register")}>
-                Register
-            </Button>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => router.push("/connectToGame")}>
-                Connect To Game
-            </Button>
-          </VStack>
-        </Center>
+          <Stack space={4} margin="auto">
+            <MyButton text="Login" onPress={() => router.push("/login")} />
+            <MyButton text="Register" onPress={() => router.push("/register")} />
+            <MyButton text="Connect To Game" onPress={() => router.push("/connectToGame")} />
+          </Stack>
+        </Box>
+        <SimpleLink link="capGame" text="Debug:capGame"/>
       </Container>
     </Center>
   );

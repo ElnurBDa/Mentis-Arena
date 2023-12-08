@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
-import {styles} from './styles/styles';
-import {Alert} from 'react-native';
+import {SimpleLink} from './components/SimpleLink.js'
+import {MyButton} from './components/MyButton.js'
+
 import { 
   Container, 
   Text, 
@@ -50,15 +51,14 @@ const Register = () => {
         <Heading color="white" marginTop={100} fontSize="3xl">
         Register
         </Heading>
-          <Stack space={4} w="100%">
-            <Input variant="underlined" color="emerald.500" placeholder="Name" onChangeText={value => setUsername(value)}/>
-            <Input variant="underlined" color="emerald.500" placeholder="Surname" onChangeText={value => setSurname(value)}/>
-            <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
-            <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => doRegistration()}>
-                Submit
-            </Button>
-          </Stack>
+        <Stack space={4} w="100%">
+          <Input variant="underlined" color="emerald.500" placeholder="Name" onChangeText={value => setUsername(value)}/>
+          <Input variant="underlined" color="emerald.500" placeholder="Surname" onChangeText={value => setSurname(value)}/>
+          <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
+          <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
+          <MyButton text="Submit" onPress={() => doRegistration()} />
+        </Stack>
+        <SimpleLink text="Back to Home..." link="/"/>
       </Container>
     </Center>
   );

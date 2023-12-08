@@ -9,6 +9,11 @@ export default function Page() {
       <Link href="/login">Login</Link>
       <Link href="/register">Register</Link>
       <Link href="/connectToGame">ConnectToGame</Link>
+      // capGame
+      <Link href="/capGame/">CapGame</Link>
+      <Link href="/capGame/question">Question</Link>
+      <Link href="/capGame/history">History</Link>
+      <Link href="/capGame/result">Result</Link>
     </View>
   );
 }

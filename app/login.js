@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
-import {styles} from './styles/styles';
+import {SimpleLink} from './components/SimpleLink.js'
+import {MyButton} from './components/MyButton.js'
 import { 
   Container, 
   Text, 
@@ -33,19 +34,6 @@ const Login = () => {
       console.log("Success!")
       router.replace("/connectToGame")
     }
-
-    // return await Parse.User.signUp(usernameValue, passwordValue)
-    //   .then((createdUser) => {
-    //     Alert.alert(
-    //       'Success!',
-    //       `User ${createdUser.getUsername()} was successfully created!`,
-    //     );
-    //     return true;
-    //   })
-    //   .catch((error) => {
-    //     Alert.alert('Error!', error.message);
-    //     return false;
-    //   });
   }
 
   return (
@@ -54,13 +42,12 @@ const Login = () => {
         <Heading color="white" marginTop={100} fontSize="3xl">
         Login
         </Heading>
-          <Stack space={4} w="100%">
-            <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
-            <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => doLogin()}>
-                Submit
-            </Button>
-          </Stack>
+        <Stack space={4} w="100%">
+          <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
+          <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
+          <MyButton text="Submit" onPress={() => doLogin()} />
+        </Stack>
+        <SimpleLink text="Back to Home..." link="/"/>
       </Container>
     </Center>
   );

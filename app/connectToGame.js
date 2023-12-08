@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
-import {styles} from './styles/styles';
+import {SimpleLink} from './components/SimpleLink.js'
+import {MyButton} from './components/MyButton.js'
 import { 
   Container, 
   Text, 
@@ -16,6 +17,7 @@ import {
   extractInObject
 } from "native-base";
 
+const gameCodeToConnect = 1234
 
 const Login = () => {
   const [gameCode, setGameCode] = useState("");
@@ -23,19 +25,10 @@ const Login = () => {
   const doConnectToGame = function () {
     const gameCodeValue = gameCode;
     console.log(gameCodeValue)
-
-    // return await Parse.User.signUp(usernameValue, passwordValue)
-    //   .then((createdUser) => {
-    //     Alert.alert(
-    //       'Success!',
-    //       `User ${createdUser.getUsername()} was successfully created!`,
-    //     );
-    //     return true;
-    //   })
-    //   .catch((error) => {
-    //     Alert.alert('Error!', error.message);
-    //     return false;
-    //   });
+    if (gameCodeToConnect == gameCodeValue){
+      console.log("Success!")
+      router.push("/capGame")
+    }
   }
 
   return (
@@ -44,12 +37,11 @@ const Login = () => {
         <Heading color="white" marginTop={100} fontSize="3xl">
         Connect to Game
         </Heading>
-          <Stack space={4} w="100%">
-            <Input variant="underlined" color="emerald.500" placeholder="Game Code" onChangeText={value => setGameCode(value)}/>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => doConnectToGame()}>
-                Submit
-            </Button>
-          </Stack>
+        <Stack space={4} w="100%">
+          <Input variant="underlined" color="emerald.500" placeholder="Game Code" onChangeText={value => setGameCode(value)}/>
+          <MyButton text="Submit" onPress={() => doConnectToGame()} />
+        </Stack>
+        <SimpleLink text="Back to Home..." link="/"/>
       </Container>
     </Center>
   );
