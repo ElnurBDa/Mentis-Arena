@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
-import {SimpleLink} from './components/SimpleLink.js'
+import {MySimpleLink} from './components/MySimpleLink.js'
 import {MyButton} from './components/MyButton.js'
+import {MyInput} from './components/MyInput.js'
 import { 
   Container, 
   Text, 
@@ -43,11 +44,11 @@ const Login = () => {
         Login
         </Heading>
         <Stack space={4} w="100%">
-          <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
-          <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
+          <MyInput placeholder="Email" onChangeText={value => setEmail(value)}/>
+          <MyInput placeholder="Password" onChangeText={value => setPassword(value)}/>
           <MyButton text="Submit" onPress={() => doLogin()} />
         </Stack>
-        <SimpleLink text="Back to Home..." link="/"/>
+        <MySimpleLink text="Back to Home..." link="/"/>
       </Container>
     </Center>
   );

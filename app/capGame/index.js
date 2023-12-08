@@ -11,6 +11,7 @@ import {
   VStack,
   Stack
 } from "native-base";
+import { MyButton } from "../components/MyButton";
 
 
 const CapGame = () => {
@@ -19,9 +20,7 @@ const CapGame = () => {
       <Text color="white" pb="4">
           Wait till Everyone joined
       </Text>
-      <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => router.push("/capGame/question")}>
-          Start
-      </Button>
+      <MyButton text="Start" onPress={() => router.push("/capGame/question")}/>
     </Box>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, router } from 'expo-router';
+import { CapGameTab } from '../components/CapGameTab';
 import { 
   Container, 
   Text, 
@@ -13,9 +14,16 @@ import {
 } from "native-base";
 
 
+const tabs = [
+  {name: "History", link: "/capGame/history", current: true},
+  {name: "Question", link: "/capGame/question", current: false},
+  {name: "Result", link: "/capGame/result", current: false}
+]
 const History = () => {
   return (
-  <Text color="emerald.500">History</Text>
+    <>
+    <CapGameTab tabs={tabs}/>
+    </>
   );
 };
 

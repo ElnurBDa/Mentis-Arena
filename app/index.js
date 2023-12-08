@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, router } from 'expo-router';
-import {SimpleLink} from './components/SimpleLink.js'
+import {MySimpleLink} from './components/MySimpleLink.js'
 import {MyButton} from './components/MyButton.js'
 
 import { 
@@ -36,7 +36,7 @@ const Home = () => {
             <MyButton text="Connect To Game" onPress={() => router.push("/connectToGame")} />
           </Stack>
         </Box>
-        <SimpleLink link="capGame" text="Debug:capGame"/>
+        <MySimpleLink link="capGame" text="Debug:capGame"/>
       </Container>
     </Center>
   );

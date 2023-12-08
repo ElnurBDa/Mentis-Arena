@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, router } from 'expo-router';
-
+import { CapGameTab } from '../components/CapGameTab';
 import { 
   Container, 
   Text, 
@@ -13,10 +13,17 @@ import {
   Stack
 } from "native-base";
 
+const tabs = [
+  {name: "History", link: "/capGame/history", current: false},
+  {name: "Question", link: "/capGame/question", current: false},
+  {name: "Result", link: "/capGame/result", current: true}
+]
 
 const Result = () => {
   return (
-  <Text color="emerald.500">Result</Text>
+    <>
+    <CapGameTab tabs={tabs}/>
+    </>
   );
 };
 
