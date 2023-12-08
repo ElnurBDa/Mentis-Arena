@@ -16,23 +16,13 @@ import {
   extractInObject
 } from "native-base";
 
-const credentials = {
-  email: "bdaelnur@gmail.com",
-  password: "root"
-}
 
 const Login = () => {
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const [gameCode, setGameCode] = useState("");
 
-  const doLogin = function () {
-    const passwordValue = password;
-    const emailValue = email;
-    console.log(emailValue, passwordValue)
-    if (credentials.email == emailValue && credentials.password == passwordValue){
-      console.log("Success!")
-      router.replace("/connectToGame")
-    }
+  const doConnectToGame = function () {
+    const gameCodeValue = gameCode;
+    console.log(gameCodeValue)
 
     // return await Parse.User.signUp(usernameValue, passwordValue)
     //   .then((createdUser) => {
@@ -52,12 +42,11 @@ const Login = () => {
     <Center marginTop={50}>
       <Container w="100%">
         <Heading color="white" marginTop={100} fontSize="3xl">
-        Login
+        Connect to Game
         </Heading>
           <Stack space={4} w="100%">
-            <Input variant="underlined" color="emerald.500" placeholder="Email" onChangeText={value => setEmail(value)}/>
-            <Input variant="underlined" color="emerald.500" placeholder="Password" onChangeText={value => setPassword(value)}/>
-            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => doLogin()}>
+            <Input variant="underlined" color="emerald.500" placeholder="Game Code" onChangeText={value => setGameCode(value)}/>
+            <Button size="lg" variant="outline" colorScheme="emerald" rounded="md" onPress={() => doConnectToGame()}>
                 Submit
             </Button>
           </Stack>

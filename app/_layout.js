@@ -1,8 +1,7 @@
 import { Slot } from 'expo-router';
-import {Text, View} from 'react-native';
 import { ImageBackground } from 'react-native';
 import { hideNavBar } from './components/androidFixes';
-import { styles } from './styles/styles';
+import { NativeBaseProvider, } from "native-base";
 
 export default function Layout() {
     hideNavBar()
@@ -12,9 +11,9 @@ export default function Layout() {
             source={require('./assets/background.png')}
             style={{ flex: 1 }}
         >
-            <View style={styles.container}>
-                <Slot />
-            </View>
+            <NativeBaseProvider>
+                <Slot/>
+            </NativeBaseProvider>
         </ImageBackground>
     );
 }

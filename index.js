@@ -8,6 +8,7 @@ export default function Page() {
       <Link href="/">Home</Link>
       <Link href="/login">Login</Link>
       <Link href="/register">Register</Link>
+      <Link href="/connectToGame">ConnectToGame</Link>
     </View>
   );
 }

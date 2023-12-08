@@ -1,14 +1,12 @@
-# Expo Router Example
-
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
-
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
+# Run
+```cmd
+npx expo start
 ```
 
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+# Some issues 
+### Native Base
+https://stackoverflow.com/questions/76579391/in-react-18-ssrprovider-is-not-necessary-and-is-a-noop-you-can-remove-it-from-y
+1) Navigate to node_modules/native-base/src/core/NativeBaseProvider.tsx
+2) Delete that wraps {children}. Take care not to delete {children}.
+3) Remove SSRProvider import. That is, delete this line import { SSRProvider } from '@react-native-aria/utils';
+4) Run npx patch-package native-base. Select yes in the prompt.
