@@ -1,18 +1,8 @@
 import React from 'react';
-import { Link, router } from 'expo-router';
-import { CapGameTab } from '../components/CapGameTab';
-import { Table } from '../components/table';
 import { 
-  Container, 
-  Text, 
-  Heading, 
-  Center, 
-  Box, 
-  Button, 
-  Divider,
-  VStack,
-  Stack
-} from "native-base";
+  CapGameTab,
+  Table
+} from '../components';
 
 const tableColumns = [
   "Question",
@@ -23,9 +13,9 @@ const tableColumns = [
 
 const tableData = [
   [1,"İsveçrə bıçağı", "İsveçrə vilkasi", 0],
-  [2,"Teleqraf telləri üzərində", "Teleqraf telləri üzərində", 0]
+  [2,"Teleqraf telləri üzərində", "Teleqraf telləri üzərində", 0],
+  [3,"Qızıl", "Qızıl", 1],
 ]
-
 
 const tabs = [
   {name: "History", link: "/capGame/history", current: true},

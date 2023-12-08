@@ -1,17 +1,10 @@
 import React from 'react';
-import { Link, router } from 'expo-router';
+import { router } from 'expo-router';
 import { 
-  Container, 
   Text, 
-  Heading, 
-  Center, 
   Box, 
-  Button, 
-  Divider,
-  VStack,
-  Stack
 } from "native-base";
-import { MyButton } from "../components/MyButton";
+import { MyButton } from "../components";
 
 
 const CapGame = () => {

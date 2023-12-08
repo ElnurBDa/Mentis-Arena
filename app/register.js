@@ -1,21 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link, router } from 'expo-router';
-import {MySimpleLink} from './components/MySimpleLink.js'
-import {MyButton} from './components/MyButton.js'
-import {MyInput} from './components/MyInput.js'
-
+import {
+  MySimpleLink,
+  MyButton,
+  MyInput
+} from './components';
 import { 
   Container, 
-  Text, 
   Heading, 
   Center, 
-  Box, 
-  Button, 
-  Divider,
-  VStack,
   Stack,
-  Input
 } from "native-base";
 
 

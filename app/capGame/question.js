@@ -1,18 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link, router } from 'expo-router';
-import { CapGameTab } from '../components/CapGameTab';
+import { CapGameTab } from '../components';
 import { 
   Container, 
   Text, 
   Heading, 
   Center, 
   Box, 
-  Button, 
-  Divider,
-  VStack,
-  Stack,
-  HStack,
   TextArea
 } from "native-base";
 
