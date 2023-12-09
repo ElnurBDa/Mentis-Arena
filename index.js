@@ -14,6 +14,11 @@ export default function Page() {
       <Link href="/capGame/question">Question</Link>
       <Link href="/capGame/history">History</Link>
       <Link href="/capGame/result">Result</Link>
+      // team
+      <Link href="/team/leaderboard">LeaderBoard</Link>
+      <Link href="/team/myTeam">MyTeam</Link>
+      <Link href="/team/teamSeparation">TeamSeparation</Link>
+
     </View>
   );
 }

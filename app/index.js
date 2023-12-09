@@ -35,7 +35,8 @@ const Home = () => {
             <MyButton text="Connect To Game" onPress={() => router.push("/connectToGame")} />
           </Stack>
         </Box>
-        <MySimpleLink link="capGame" text="Debug:capGame"/>
+        <MySimpleLink link="/capGame" text="Debug:capGame"/>
+        <MySimpleLink link="/team" text="Debug:team"/>
       </Container>
     </Center>
   );

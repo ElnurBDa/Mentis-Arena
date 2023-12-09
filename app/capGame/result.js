@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   CapGameTab,
-  Table
+  Table,
+  MySimpleLink
 } from '../components';
 
 const tabs = [
@@ -31,6 +32,7 @@ const Result = () => {
     <>
     <CapGameTab tabs={tabs}/>
     <Table tableData={tableData} tableColumns={tableColumns}/>
+    <MySimpleLink link="/team" text="Team Menu"/>
     </>
   );
 };

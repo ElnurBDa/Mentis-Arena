@@ -4,6 +4,7 @@ import {MyButton} from './MyButton';
 import {MyInput} from './MyInput';
 import {MySimpleLink} from './MySimpleLink';
 import {Table} from './Table';
+import {PlayerRow } from './PlayerRow';
 
 export {
     androidFixes,
@@ -12,4 +13,5 @@ export {
     MyInput,
     MySimpleLink,
     Table,
+    PlayerRow
 };
