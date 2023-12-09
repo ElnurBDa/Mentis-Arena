@@ -14,6 +14,7 @@ import {
   Flex
 } from "native-base";
 import {styles} from './styles/styles';
+import { router } from 'expo-router';
 
 
 const Register = () => {
@@ -23,24 +24,33 @@ const Register = () => {
   const [email, setEmail] = useState("");
 
   const doRegistration = function () {
-    const usernameValue = username;
-    const passwordValue = password;
-    const surnameValue = surname;
-    const emailValue = email;
-    console.log(usernameValue, passwordValue, surnameValue, emailValue)
+    const requestBody = {
+      email: email,
+      password: password,
+      name: username,
+      surname: surname
+    };
 
-    // return await Parse.User.signUp(usernameValue, passwordValue)
-    //   .then((createdUser) => {
-    //     Alert.alert(
-    //       'Success!',
-    //       `User ${createdUser.getUsername()} was successfully created!`,
-    //     );
-    //     return true;
-    //   })
-    //   .catch((error) => {
-    //     Alert.alert('Error!', error.message);
-    //     return false;
-    //   });
+    fetch('https://mentis.svdev.me/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('User registration successful');
+          router.replace('/login');
+        } else {
+          console.log('User registration failed');
+          router.replace('/register');
+        }
+      })
+      .catch(error => {
+        console.error('Error occurred during user registration:', error);
+        // Handle error here
+      });
   }
 
   return (

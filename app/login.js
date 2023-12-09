@@ -26,13 +26,28 @@ const Login = () => {
   const [email, setEmail] = useState("");
 
   const doLogin = function () {
-    const passwordValue = password;
-    const emailValue = email;
-    console.log(emailValue, passwordValue)
-    if (credentials.email == emailValue && credentials.password == passwordValue){
-      console.log("Success!")
-      router.replace("/profile")
-    }
+    fetch(`https://mentis.svdev.me/v1/users/${email}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        password: password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        if (data.success) {
+          console.log("Success!");
+          router.replace("/profile");
+        } else {
+          console.log("Invalid credentials");
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
   }
 
   return (
