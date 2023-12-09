@@ -9,6 +9,7 @@ import {
   Box, 
   TextArea
 } from "native-base";
+import {styles} from '../styles/styles';
 
 const tabs = [
   {name: "History", link: "/capGame/history", current: false},
@@ -33,15 +34,15 @@ const Question = () => {
     <>
     <CapGameTab tabs={tabs}/>
     <Heading marginTop={10} m="auto" fontSize="lg">
-      <Text color="white" fontWeight="bold">Question {questionNumber}</Text>
+      <Text color={styles.pcolor} fontWeight="bold">Question {questionNumber}</Text>
     </Heading>
     <Center marginTop={10} m="auto">
       <Container w="100%">
-        <Text color="white">{questionText}</Text>
+        <Text color={styles.pcolor}>{questionText}</Text>
       </Container>
     </Center>
     <Box alignItems="center" w="100%" marginTop={10}>
-      <TextArea h={20} placeholder="Your Answer" w="75%" maxW="300" color="emerald.500" 
+      <TextArea h={20} placeholder="Your Answer" w="75%" maxW="300" color={styles.scolor} 
         onChangeText={value => setAnswerText(value)}/>
     </Box>
     </>

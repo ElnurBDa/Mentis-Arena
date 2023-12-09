@@ -4,6 +4,7 @@ import {
   Table,
   MySimpleLink
 } from '../components';
+import {styles} from '../styles/styles';
 
 const tabs = [
   {name: "History", link: "/capGame/history", current: false},

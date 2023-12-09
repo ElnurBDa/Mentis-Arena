@@ -7,6 +7,7 @@ import {
     ScrollView,
     Divider,
 } from "native-base";
+import {styles} from '../styles/styles';
 
 
 const caps = [
@@ -74,14 +75,14 @@ const MyTeam = () => {
     return (
         <>
         <Heading marginTop={50} m="auto" fontSize="3xl">
-            <Text color="white" fontWeight="bold">Time to choose your Teammembers</Text>
+            <Text color={styles.pcolor} fontWeight="bold">Time to choose your Teammembers</Text>
         </Heading>
         <ScrollView h="40%">
         {caps.map((player, index) => <PlayerRow key={index} player={player} chooser={chooserIndex==index} />)}
         </ScrollView>
-        <Divider my={2} bg="white" />
+        <Divider my={2} bg={styles.pcolor} />
         <Heading marginTop={50} m="auto" fontSize="3xl">
-            <Text color="white" fontWeight="bold">Available players:</Text>
+            <Text color={styles.pcolor} fontWeight="bold">Available players:</Text>
         </Heading>
         <ScrollView h="40%">
         {availablePlayers.map((player, index) => <PlayerRow key={index} player={player} chooser={chosenPlayers.includes(index)} />)}

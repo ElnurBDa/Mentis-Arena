@@ -10,7 +10,10 @@ import {
   Heading, 
   Center, 
   Stack,
+  Text,
+  Flex
 } from "native-base";
+import {styles} from './styles/styles';
 
 
 const Register = () => {
@@ -43,7 +46,7 @@ const Register = () => {
   return (
     <Center marginTop={50}>
       <Container w="100%">
-        <Heading color="white" marginTop={100} fontSize="3xl">
+        <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
         Register
         </Heading>
         <Stack space={4} w="100%">
@@ -52,6 +55,10 @@ const Register = () => {
           <MyInput placeholder="Password" onChangeText={value => setPassword(value)}/>
           <MyInput placeholder="Email" onChangeText={value => setEmail(value)}/>
           <MyButton text="Submit" onPress={() => doRegistration()} />
+          <Flex direction="row" align="center">
+            <Text color={styles.pcolor}>You have already created an Account?  </Text>
+            <MySimpleLink text="Login" link="/login"/>
+          </Flex>
         </Stack>
         <MySimpleLink text="Back to Home..." link="/"/>
       </Container>

@@ -6,6 +6,7 @@ import {
   HStack,
   Spacer
 } from "native-base";
+import {styles} from '../styles/styles';
 
 player = {
   photo: require("../assets/avatars/1.png"),
@@ -15,14 +16,14 @@ player = {
 }
 export const PlayerRow = ({player, chooser=false}) => {
   return (
-    <Box bg={chooser?"rgba(167,243,208,0.2)":"transparent"} marginTop={3}
-    rounded="md"  p="5" m="auto" borderWidth={1} borderColor="white" w="90%">
+    <Box bg={chooser?"rgba(167,243,208,0.2)":styles.pbgcolor} marginTop={3}
+    rounded="md"  p="5" m="auto" borderWidth={1} borderColor={styles.pcolor} w="90%">
         <HStack space={3} alignItems="center">
           <Avatar size="md" source={player.photo} />
-          {player.team?<Text w="20%" color="emerald.500" fontWeight="bold" fontSize="lg">{player.team}</Text>:null}
-          <Text color="white" fontWeight="bold" fontSize="lg">{player.name}</Text>
+          {player.team?<Text w="20%" color={styles.scolor} fontWeight="bold" fontSize="lg">{player.team}</Text>:null}
+          <Text color={styles.pcolor} fontWeight="bold" fontSize="lg">{player.name}</Text>
           <Spacer />
-          <Text w="10%" color="emerald.500" fontWeight="bold" fontSize="lg">{player.points}</Text>
+          <Text w="10%" color={styles.scolor} fontWeight="bold" fontSize="lg">{player.points}</Text>
         </HStack>
     </Box>
     )

@@ -3,6 +3,7 @@ import {
   CapGameTab,
   Table
 } from '../components';
+import {styles} from '../styles/styles';
 
 const tableColumns = [
   "Question",

@@ -18,7 +18,8 @@ export default function Page() {
       <Link href="/team/leaderboard">LeaderBoard</Link>
       <Link href="/team/myTeam">MyTeam</Link>
       <Link href="/team/teamSeparation">TeamSeparation</Link>
-
+      // profile
+      <Link href="/profile">Profile</Link>
     </View>
   );
 }

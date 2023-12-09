@@ -5,6 +5,7 @@ import {
     Heading, 
     Center, 
 } from "native-base";
+import {styles} from '../styles/styles';
 
   
 export default function CapGameLayout() {
@@ -12,7 +13,7 @@ export default function CapGameLayout() {
     <Center marginTop={50}>
       <Container w="100%">
         <Heading marginTop={100} m="auto" fontSize="5xl">
-          <Text color="emerald.500">CapGame</Text>
+          <Text color={styles.scolor}>CapGame</Text>
         </Heading>
         <Slot/>
       </Container>

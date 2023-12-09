@@ -5,6 +5,7 @@ import {
   Heading, 
   ScrollView
 } from "native-base";
+import {styles} from '../styles/styles';
 
 const sampleTeamName = "Şuşa"
 const sampleTeam = [
@@ -45,7 +46,7 @@ const MyTeam = () => {
   return (
     <>
     <Heading marginTop={50} m="auto" fontSize="3xl">
-        <Text color="white" fontWeight="bold">{sampleTeamName}</Text>
+        <Text color={styles.pcolor} fontWeight="bold">{sampleTeamName}</Text>
     </Heading>
     <ScrollView>
     {sampleTeam.map((player, index) => <PlayerRow key={index} player={player} />)}

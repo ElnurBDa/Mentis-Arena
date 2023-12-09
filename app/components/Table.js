@@ -6,6 +6,7 @@ import {
   VStack,
   Divider
 } from "native-base";
+import {styles} from '../styles/styles';
 
 export const TableRow = ({row, borderBottomWidth}) => {
   return (
@@ -14,8 +15,8 @@ export const TableRow = ({row, borderBottomWidth}) => {
         return (
           <Center key={index} w="33%" borderBottomWidth={borderBottomWidth} 
           borderRightWidth={index !== row.length - 1 ? 1 : 0} 
-          borderColor="white">
-            <Text fontSize="sm" color="white">{cell}</Text>
+          borderColor={styles.pcolor}>
+            <Text fontSize="sm" color={styles.pcolor}>{cell}</Text>
           </Center>
         )
       })}
@@ -28,7 +29,7 @@ export const Table = ({tableData, tableColumns}) => {
     <>
       <VStack justifyContent="center" mt={3} w="100%">
         <TableRow row={tableColumns} key={-1} borderBottomWidth={0} />
-        <Divider my={2} bg="white" />
+        <Divider my={2} bg={styles.pcolor} />
         {tableData.map((row, index) => {
           return (
             <TableRow row={row} key={index} borderBottomWidth={1} />

@@ -6,13 +6,13 @@ import {
   MyButton,
   MyInput
 } from './components';
-
 import { 
   Container, 
   Heading, 
   Center, 
   Stack,
 } from "native-base";
+import {styles} from './styles/styles';
 
 const gameCodeToConnect = 1234
 
@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <Center marginTop={50}>
       <Container w="100%">
-        <Heading color="white" marginTop={100} fontSize="3xl">
+        <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
         Connect to Game
         </Heading>
         <Stack space={4} w="100%">
