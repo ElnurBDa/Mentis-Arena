@@ -15,5 +15,5 @@ export {
     MySimpleLink,
     Table,
     PlayerRow,
-    BottomNavBar,
+    BottomNavBar
 };

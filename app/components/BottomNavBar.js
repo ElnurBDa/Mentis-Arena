@@ -1,57 +1,39 @@
 import React from 'react';
-import { Box, HStack, Pressable, Icon } from 'native-base';
-import { router } from 'expo-router';
-import {styles} from '../styles/styles';
-import { MaterialIcons } from '@expo/vector-icons';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import { AntDesign } from '@expo/vector-icons'; 
+
 
 export const BottomNavBar = () => {
     return (
-        <Box safeAreaBottom shadow={6}>
-            <HStack bg={styles.tcolor} alignItems="center" safeAreaBottom shadow={2}>
-                <Pressable 
-                    cursor="pointer" 
-                    opacity={0.6} 
-                    py="3" 
-                    flex={1} 
-                    onPress={() => router.push("/")}
-                >
-                    <Icon 
-                        as={<MaterialIcons name="home" />}
-                        size="sm" 
-                        color={styles.scolor}
-                    />
-                </Pressable>
-
-                <Pressable 
-                    cursor="pointer" 
-                    opacity={0.6} 
-                    py="3" 
-                    flex={1} 
-                    onPress={() => router.push("/profile")}
-                >
-                    <Icon 
-                        as={<MaterialIcons name="person" />} 
-                        size="sm" 
-                        color={styles.scolor}
-                    />
-                </Pressable>
-
-                <Pressable 
-                    cursor="pointer" 
-                    opacity={0.6} 
-                    py="3" 
-                    flex={1} 
-                    onPress={() => router.push("/capGame")}
-                >
-                    <Icon 
-                        as={<MaterialIcons name="videogame-asset" />} 
-                        size="sm" 
-                        color={styles.scolor}
-                    />
-                </Pressable>
-            </HStack>
-        </Box>
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.iconContainer}>
+            <AntDesign name="home" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.iconContainer}>
+            <AntDesign name="home" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.iconContainer}>
+            <AntDesign name="home" size={24} color="black" />
+            </TouchableOpacity>
+        </View>
     );
 }
 
-export default BottomNavBar;
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        height: 60,
+        borderTopWidth: 1,
+        borderTopColor: 'gray',
+        position: 'absolute',
+        bottom: 0,
+    },
+    iconContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
