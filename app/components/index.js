@@ -5,7 +5,7 @@ import {MyInput} from './MyInput';
 import {MySimpleLink} from './MySimpleLink';
 import {Table} from './Table';
 import {PlayerRow } from './PlayerRow';
-import {styles} from '../styles/styles';
+import {BottomNavBar} from './BottomNavBar';
 
 export {
     androidFixes,
@@ -14,5 +14,6 @@ export {
     MyInput,
     MySimpleLink,
     Table,
-    PlayerRow
+    PlayerRow,
+    BottomNavBar,
 };

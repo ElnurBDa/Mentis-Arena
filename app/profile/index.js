@@ -46,16 +46,17 @@ const Profile = () => {
         <HStack space={4} w="90%" mt={5} m="auto">
           <MyButton text="Edit" onPress={() => console.log("Edit Profile")} />
           <Spacer />
-          <MyButton text="Connect" onPress={() => router.replace("/connectToGame")} />
+          <MyButton text="Connect" onPress={() => router.push("/connectToGame")} />
           <Spacer />
-          <MyButton text="Team" onPress={() => router.replace("/team")} />
+          <MyButton text="Team" onPress={() => router.push("/team")} />
         </HStack>
         <Box w="90%" marginTop={5} bg={styles.pbgcolor} rounded="md"  p="5" m="auto"
          borderWidth={1} borderColor={styles.pcolor} h="60%">
-            <Box h="40%" w="90%" m="auto">
+            <Box h="30%" m="auto">
               <Image
                 source={require('../assets/graph.png')}
-                flex={1}
+                flex={1} m="auto"
+                aspectRatio={1.77}
                 resizeMode="cover"
               />
             </Box>
@@ -72,7 +73,7 @@ const Profile = () => {
             <Divider my={1} bg={styles.pcolor} color={styles.pcolor}/>
             <MyButton text="Take Mock Quiz" onPress={() => router.replace("/capGame/question")} />
         </Box>
-        <MySimpleLink text="Back to Home..." link="/"/>
+        
       </Container>
     </Center>
   );

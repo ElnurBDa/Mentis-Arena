@@ -3,6 +3,7 @@ import { ImageBackground } from 'react-native';
 import { hideNavBar } from './components/androidFixes';
 import { NativeBaseProvider, } from "native-base";
 import {styles} from './styles/styles';
+import { BottomNavBar} from './components/BottomNavBar';
 
 export default function Layout() {
     hideNavBar()
@@ -14,7 +15,9 @@ export default function Layout() {
         >
             <NativeBaseProvider>
                 <Slot/>
+                <BottomNavBar/>
             </NativeBaseProvider>
+        
         </ImageBackground>
     );
 }

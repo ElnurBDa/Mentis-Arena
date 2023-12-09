@@ -60,7 +60,7 @@ const Register = () => {
             <MySimpleLink text="Login" link="/login"/>
           </Flex>
         </Stack>
-        <MySimpleLink text="Back to Home..." link="/"/>
+        
       </Container>
     </Center>
   );

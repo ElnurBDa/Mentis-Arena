@@ -33,7 +33,6 @@ const Home = () => {
             <MyButton text="Leaderboard" onPress={() => router.push("/team/leaderboard")} />
           </Stack>
         </Box>
-        <MySimpleLink link="/" text="Back to Home..."/>
       </Container>
     </Center>
   );

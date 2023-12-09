@@ -38,7 +38,7 @@ const Login = () => {
           <MyInput placeholder="Game Code" onChangeText={value => setGameCode(value)}/>
           <MyButton text="Submit" onPress={() => doConnectToGame()} />
         </Stack>
-        <MySimpleLink text="Back to Home..." link="/"/>
+        
       </Container>
     </Center>
   );
