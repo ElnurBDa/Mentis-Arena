@@ -5,7 +5,8 @@ import { Link } from 'expo-router';
 export default function Page() {
   return (
     <View>
-      <Link href="/">Home</Link>
+      <Link href="/">index</Link>
+      <Link href="/home">Home</Link>
       <Link href="/login">Login</Link>
       <Link href="/register">Register</Link>
       <Link href="/connectToGame">ConnectToGame</Link>

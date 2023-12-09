@@ -1,7 +1,7 @@
 import { Slot } from 'expo-router';
 import { ImageBackground } from 'react-native';
 import { hideNavBar } from './components/androidFixes';
-import { NativeBaseProvider, } from "native-base";
+import { NativeBaseProvider, Spacer } from "native-base";
 import {styles} from './styles/styles';
 import { BottomNavBar} from './components';
 
@@ -15,9 +15,9 @@ export default function Layout() {
         >
             <NativeBaseProvider>
                 <Slot/>
-                <BottomNavBar/>
+                
             </NativeBaseProvider>
-        
+        <BottomNavBar/>
         </ImageBackground>
     );
 }
