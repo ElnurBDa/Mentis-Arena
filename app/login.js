@@ -15,38 +15,29 @@ import {
   Flex
 } from "native-base";
 import {styles} from './styles/styles';
-
-const credentials = {
-  email: "bdaelnur@gmail.com",
-  password: "root"
-}
+import axios from 'axios';
 
 const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
+  // smth wrong with this function
   const doLogin = function () {
-    fetch(`https://mentis.svdev.me/v1/users/${email}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        password: password,
-      }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        if (data.success) {
-          console.log("Success!");
-          router.replace("/profile");
-        } else {
-          console.log("Invalid credentials");
-        }
+    router.replace('/profile');
+    return;
+    const apiUrl = `https://mentis.svdev.me/v1/users/${email}`;
+    const requestBody = {
+      password: password
+    };
+
+    axios.get(apiUrl, requestBody)
+      .then(function (response) {
+        console.log(response);
+        router.replace('/profile');
       })
-      .catch(error => {
-        console.error("Error:", error);
+      .catch(function (error) {
+        console.log(error);
+        router.replace('/login');
       });
   }
 
