@@ -12,8 +12,8 @@ export default function CapGameLayout() {
   return (<>
     <Center marginTop={50}>
       <Container w="100%">
-        <Heading marginTop={100} m="auto" fontSize="5xl">
-          <Text color={styles.scolor}>CapGame</Text>
+        <Heading marginTop={100} marginBottom={5} m="auto" fontSize="4xl">
+          <Text color={styles.scolor}>Kapitanlıq Oyunu</Text>
         </Heading>
         <Slot/>
       </Container>

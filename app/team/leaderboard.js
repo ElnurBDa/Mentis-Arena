@@ -36,52 +36,52 @@ const players = [
         points: 17
     }, {
         photo: require("../assets/avatars/6.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "Zəngilan",
         points: 15
     }, {
         photo: require("../assets/avatars/7.png"),
-        name: "Player 7",
+        name: "Oyunçu 7",
         team: "Zəngilan",
         points: 13
     }, {
         photo: require("../assets/avatars/8.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "Zəngilan",
         points: 15
     }, {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 7",
+        name: "Oyunçu 7",
         team: "Zəngilan",
         points: 13
     }, {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "Zəngilan",
         points: 15
     }, {
         photo: require("../assets/avatars/2.png"),
-        name: "Player 7",
+        name: "Oyunçu 7",
         team: "Zəngilan",
         points: 13
     }, {
         photo: require("../assets/avatars/3.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "Zəngilan",
         points: 15
     }, {
         photo: require("../assets/avatars/4.png"),
-        name: "Player 7",
+        name: "Oyunçu 7",
         team: "Zəngilan",
         points: 13
     }, {
         photo: require("../assets/avatars/5.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "Zəngilan",
         points: 3
     }, {
         photo: require("../assets/avatars/6.png"),
-        name: "Player 7",
+        name: "Oyunçu 7",
         team: "Zəngilan",
         points: 0
     }, 
@@ -92,7 +92,7 @@ const MyTeam = () => {
     return (
         <>
         <Heading marginTop={50} m="auto" fontSize="3xl">
-            <Text color={styles.pcolor} fontWeight="bold">Leaderboard</Text>
+            <Text color={styles.pcolor} fontWeight="bold">Sıralama</Text>
         </Heading>
         <ScrollView>
         {players.map((player, index) => <PlayerRow key={index} player={player} chooser={2==index} />)}

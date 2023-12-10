@@ -28,9 +28,9 @@ const Home = () => {
             Here you can manage your team, yourself and your team members. and also you can see the leaderboard of your team.
           </Text>
           <Stack space={4} margin="auto">
-            <MyButton text="My Team" onPress={() => router.push("/team/myTeam")} />
-            <MyButton text="Separation" onPress={() => router.push("/team/teamSeparation")} />
-            <MyButton text="Leaderboard" onPress={() => router.push("/team/leaderboard")} />
+            <MyButton text="Mənim komandam" onPress={() => router.push("/team/myTeam")} />
+            <MyButton text="Komanda Yoldaşını seç" onPress={() => router.push("/team/teamSeparation")} />
+            <MyButton text="Sıralama" onPress={() => router.push("/team/leaderboard")} />
           </Stack>
         </Box>
       </Container>

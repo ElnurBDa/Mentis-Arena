@@ -12,7 +12,9 @@ import {
   Center, 
   Stack,
   Text,
-  Flex
+  Flex,
+  Avatar,
+  Spacer
 } from "native-base";
 import {styles} from './styles/styles';
 import axios from 'axios';
@@ -45,19 +47,20 @@ const Login = () => {
     <Center marginTop={50}>
       <Container w="100%">
         <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
-        Login
+        Daxil ol
         </Heading>
         <Stack space={4} w="100%">
-          <MyInput placeholder="Email" onChangeText={value => setEmail(value)}/>
-          <MyInput placeholder="Password" onChangeText={value => setPassword(value)}/>
-          <MyButton text="Submit" onPress={() => doLogin()} />
+          <MyInput placeholder="Email..." onChangeText={value => setEmail(value)}/>
+          <MyInput placeholder="Şifrə..." onChangeText={value => setPassword(value)}/>
+          <MyButton text="Davam et" onPress={() => doLogin()} />
           <Flex direction="row" align="center">
-            <Text color={styles.pcolor}>No Account?  </Text>
-            <MySimpleLink text="Register" link="/register"/>
+            <Text color={styles.pcolor}>Hesabınız yoxdur?  </Text>
+            <MySimpleLink text="Qeydiyyatdan keç" link="/register"/>
           </Flex>
         </Stack>
-        
       </Container>
+      <Spacer />
+      <Avatar size="lg" source={require("./assets/logo2.png")} marginTop={300}/>          
     </Center>
   );
 };

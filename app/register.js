@@ -11,7 +11,9 @@ import {
   Center, 
   Stack,
   Text,
-  Flex
+  Flex,
+  Avatar,
+  Spacer
 } from "native-base";
 import {styles} from './styles/styles';
 import { router } from 'expo-router';
@@ -57,21 +59,23 @@ const Register = () => {
     <Center marginTop={50}>
       <Container w="100%">
         <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
-        Register
+        Qeydiyyatdan keç
         </Heading>
+        <Text color={styles.pcolor}>Şəxsi məlumatlarınızı daxil edin: </Text>
         <Stack space={4} w="100%">
-          <MyInput placeholder="Name" onChangeText={value => setUsername(value)}/>
-          <MyInput placeholder="Surname" onChangeText={value => setSurname(value)}/>
-          <MyInput placeholder="Password" onChangeText={value => setPassword(value)}/>
-          <MyInput placeholder="Email" onChangeText={value => setEmail(value)}/>
-          <MyButton text="Submit" onPress={() => doRegistration()} />
+          <MyInput placeholder="Ad..." onChangeText={value => setUsername(value)}/>
+          <MyInput placeholder="Soyad..." onChangeText={value => setSurname(value)}/>
+          <MyInput placeholder="Email..." onChangeText={value => setEmail(value)}/>
+          <MyInput placeholder="Şifrə..." onChangeText={value => setPassword(value)}/>
+          <MyButton text="Davam et" onPress={() => doRegistration()} />
           <Flex direction="row" align="center">
-            <Text color={styles.pcolor}>You have already created an Account?  </Text>
-            <MySimpleLink text="Login" link="/login"/>
+            <Text color={styles.pcolor}>Hesabınız var?  </Text>
+            <MySimpleLink text="Daxil ol" link="/login"/>
           </Flex>
         </Stack>
-        
       </Container>
+      <Spacer />
+      <Avatar size="lg" source={require("./assets/logo2.png")} marginTop={250}/>  
     </Center>
   );
 };

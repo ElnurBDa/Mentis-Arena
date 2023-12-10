@@ -16,27 +16,27 @@ const sampleTeam = [
         points: 47
     }, {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 2",
+        name: "Oyunçu 2",
         team: "",
         points: 40
     },  {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 3",
+        name: "Oyunçu 3",
         team: "",
         points: 53
     },  {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 4",
+        name: "Oyunçu 4",
         team: "",
         points: 4
     },  {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 5",
+        name: "Oyunçu 5",
         team: "",
         points: 30
     },  {
         photo: require("../assets/avatars/1.png"),
-        name: "Player 6",
+        name: "Oyunçu 6",
         team: "",
         points: 0
     }, 

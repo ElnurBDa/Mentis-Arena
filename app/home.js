@@ -25,29 +25,34 @@ const Home = () => {
     >
       <Center marginTop={50}>
         <Container w="100%">
-          <Heading color={styles.pcolor} marginTop={100} fontSize="2xl">
-            Welcome to {"\n\n"}
-            <Text color={styles.scolor} fontSize="5xl"> Mentis Arena</Text>
+          <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
+            {/*Welcome to {"\n\n"}
+             <Text color={styles.scolor} fontSize="5xl"> Mentis Arena</Text> */}
           </Heading>
 
-          <Box marginTop={350} p="5" m="auto" zIndex={2}>
-            <Text  fontWeight="medium" color={styles.pcolor} pb="4">
+          <Box marginTop={330} p="5" m="auto" zIndex={2}>
+            <Text  fontWeight="medium" color={styles.pcolor} pb="4" fontSize="lg" fontWeight="800">
               Oyun panelinizə xoş gəldiniz!
+            </Text>
+            <Text  fontWeight="medium" color={styles.pcolor} pb="4">
               Biliyinizi parlatmaq və zehninizi sınağa çəkmək üçün mükəmməl bir fürsət!
             </Text>
             <Stack space={4} margin="auto">
-              <MyButton text="Login" onPress={() => router.push("/login")} />
+              <MyButton text="Daxil ol" onPress={() => router.push("/login")} />
             </Stack>
           </Box>
-          <MySimpleLink link="/capGame" text="Debug:capGame"/>
-          <MySimpleLink link="/team" text="Debug:team"/>
-          <MySimpleLink link="/profile" text="Debug:profile"/>
           <Image
             source={require('./assets/blur.png')}
             position="absolute"
-            bottom={50}
+            bottom={10}
             m="auto"
             zIndex={1}
+          />
+          <Image
+            source={require('./assets/logo.png')}
+            position="absolute"
+            zIndex={1}
+            style={{ width: '100%', height: '45%',  }}
           />
         </Container>
       </Center>

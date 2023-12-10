@@ -6,10 +6,10 @@ import {
 import {styles} from '../styles/styles';
 
 const tableColumns = [
-  "Question",
-  "Correct Answer",
-  "Your Answer",
-  "Point"
+  "Sual",
+  "Doğru Cavab",
+  "Sizin Cavabınız",
+  "Xal"
 ]
 
 const tableData = [
@@ -19,9 +19,9 @@ const tableData = [
 ]
 
 const tabs = [
-  {name: "History", link: "/capGame/history", current: true},
-  {name: "Question", link: "/capGame/question", current: false},
-  {name: "Result", link: "/capGame/result", current: false}
+  {name: "Tarix", link: "/capGame/history", current: true},
+  {name: "Sual", link: "/capGame/question", current: false},
+  {name: "Nəticə", link: "/capGame/result", current: false}
 ]
 const History = () => {
   return (

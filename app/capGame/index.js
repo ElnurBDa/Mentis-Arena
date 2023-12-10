@@ -12,9 +12,9 @@ const CapGame = () => {
   return (
     <Box bg={styles.pbgcolor} rounded="md" w="100%" p="5" m="auto" borderWidth={1} borderColor={styles.pcolor}>
       <Text color={styles.pcolor} pb="4">
-          Wait till Everyone joined
+          Digər oyunçuları gözləyirik...
       </Text>
-      <MyButton text="Start" onPress={() => router.push("/capGame/question")}/>
+      <MyButton text="Başlayın" onPress={() => router.push("/capGame/question")}/>
     </Box>
   );
 };

@@ -32,11 +32,11 @@ const Login = () => {
     <Center marginTop={50}>
       <Container w="100%">
         <Heading color={styles.pcolor} marginTop={100} fontSize="3xl">
-        Connect to Game
+        Oyuna qoşul
         </Heading>
         <Stack space={4} w="100%">
-          <MyInput placeholder="Game Code" onChangeText={value => setGameCode(value)}/>
-          <MyButton text="Submit" onPress={() => doConnectToGame()} />
+          <MyInput placeholder="Oyun kodu" onChangeText={value => setGameCode(value)}/>
+          <MyButton text="Davam et" onPress={() => doConnectToGame()} />
         </Stack>
         
       </Container>

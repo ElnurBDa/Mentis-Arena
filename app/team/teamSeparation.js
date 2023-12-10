@@ -42,27 +42,27 @@ const caps = [
 const availablePlayers = [
     {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 1",
+        name: "Oyunçu 1",
         team: "",
         points: 13
     }, {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 2",
+        name: "Oyunçu 2",
         team: "",
         points: 12
     }, {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 3",
+        name: "Oyunçu 3",
         team: "",
         points: 7
     }, {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 4",
+        name: "Oyunçu 4",
         team: "",
         points: 3
     }, {
         photo: require("../assets/avatars/9.png"),
-        name: "Player 5",
+        name: "Oyunçu 5",
         team: "",
         points: 0
     }, 
@@ -75,14 +75,14 @@ const MyTeam = () => {
     return (
         <>
         <Heading marginTop={50} m="auto" fontSize="3xl">
-            <Text color={styles.pcolor} fontWeight="bold">Time to choose your Teammembers</Text>
+            <Text color={styles.pcolor} fontWeight="bold">Komanda yoldaşı seçmək üçün növbə sizindir</Text>
         </Heading>
         <ScrollView h="40%">
         {caps.map((player, index) => <PlayerRow key={index} player={player} chooser={chooserIndex==index} />)}
         </ScrollView>
         <Divider my={2} bg={styles.pcolor} />
         <Heading marginTop={50} m="auto" fontSize="3xl">
-            <Text color={styles.pcolor} fontWeight="bold">Available players:</Text>
+            <Text color={styles.pcolor} fontWeight="bold">Mövcud oyunçular</Text>
         </Heading>
         <ScrollView h="40%">
         {availablePlayers.map((player, index) => <PlayerRow key={index} player={player} chooser={chosenPlayers.includes(index)} />)}

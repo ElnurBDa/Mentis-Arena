@@ -10,7 +10,6 @@ import {
   Center, 
   HStack,
   Spacer,
-  VStack,
   ScrollView,
   Divider,
   Box,
@@ -39,16 +38,14 @@ const Profile = () => {
   return (
     <Center marginTop={50}>
       <Container w="100%">
-        <Heading color={styles.pcolor} marginTop={20} fontSize="3xl">
-        Profile Page
+        <Heading color={styles.pcolor} marginTop={20} fontSize="3xl" m="auto">
+        Profil
         </Heading>
         <PlayerRow player={playerInfo} />
         <HStack space={4} w="90%" mt={5} m="auto">
-          <MyButton text="Edit" onPress={() => console.log("Edit Profile")} />
+          <MyButton text="Oyuna qoşul" onPress={() => router.push("/connectToGame")} />
           <Spacer />
-          <MyButton text="Connect" onPress={() => router.push("/connectToGame")} />
-          <Spacer />
-          <MyButton text="Team" onPress={() => router.push("/team")} />
+          <MyButton text="Komanda" onPress={() => router.push("/team")} />
         </HStack>
         <Box w="90%" marginTop={5} bg={styles.pbgcolor} rounded="md"  p="5" m="auto"
          borderWidth={1} borderColor={styles.pcolor} h="60%">
@@ -61,8 +58,8 @@ const Profile = () => {
               />
             </Box>
             <Text color={styles.pcolor} fontWeight="medium" fontSize="sm">
-              We Recommend You To Play Topics related to 20th Century and Animals. As it seems
-              you have troubles in these topics. You can check this resources to improve your Knowledge:
+              20-ci Əsr və Heyvanlar Aləmi ilə əlaqəli Mövzuları Oynamağı Tövsiyə edirik. Göründüyü kimi
+              bu mövzularda probleminiz var. Biliklərinizi təkmilləşdirmək üçün bu resursları yoxlaya bilərsiniz:
             </Text>
             <Divider my={1} bg={styles.pcolor} color={styles.pcolor}/>
             <ScrollView>
@@ -71,7 +68,7 @@ const Profile = () => {
             ))}
             </ScrollView>
             <Divider my={1} bg={styles.pcolor} color={styles.pcolor}/>
-            <MyButton text="Take Mock Quiz" onPress={() => router.replace("/capGame/question")} />
+            <MyButton text="Sınaq testinə başla" onPress={() => router.replace("/capGame/question")} />
         </Box>
         
       </Container>
